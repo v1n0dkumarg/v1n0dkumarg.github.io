@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Vinodkumar G — QA Engineer & Software Testing Professional at OpenText. Automation, security, functional & performance testing." />
-  <meta property="og:title" content="Vinodkumar G | QA Engineer & Software Tester" />
-  <meta property="og:description" content="QA Engineer & Software Testing Professional — automation, security, 3 patents, 2 publications, enterprise QA expert." />
+  <meta name="description" content="Vinodkumar G — Software Engineer and Security Advocate at OpenText. Java, Python, Spring Boot, AWS, secure backend development." />
+  <meta property="og:title" content="Vinodkumar G | Software Engineer" />
+  <meta property="og:description" content="Software Engineer and Security Advocate — Java, Python, Spring Boot, AWS, secure APIs, and four patents." />
   <meta property="og:type" content="website" />
-  <title>Vinodkumar G | QA Engineer & Software Tester</title>
+  <title>Vinodkumar G | Software Engineer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -274,6 +274,7 @@
     @media(max-width:480px) {
       .stats-g { grid-template-columns:1fr 1fr; }
       .cards-g { grid-template-columns:1fr; }
+      .hero-name { font-size:clamp(1.65rem,8vw,2.3rem); white-space:nowrap; }
     }
 
     /* ── SECTION BG VARIANTS ── */
@@ -286,9 +287,106 @@
 
     /* ── SUB-SECTION HEADER ── */
     .sub-hdr { font-family:var(--ff-mono); font-size:.72rem; color:var(--t3); text-transform:uppercase; letter-spacing:.15em; margin-bottom:18px; display:flex; align-items:center; gap:8px; }
+
+    /* ── DESIGN OPTIONS ── */
+    .design-picker { position:fixed; top:78px; right:18px; z-index:9999; display:flex; align-items:center; gap:4px; padding:6px; border:1px solid var(--border); border-radius:12px; background:rgba(8,10,18,.86); backdrop-filter:blur(16px); box-shadow:0 8px 28px rgba(0,0,0,.22); }
+    .design-label { padding:0 8px; color:var(--t3); font:600 .62rem var(--ff-mono); letter-spacing:.08em; text-transform:uppercase; }
+    .design-picker button { border:0; border-radius:7px; padding:8px 10px; color:var(--t2); background:transparent; font:600 .68rem var(--ff-mono); transition:all .2s var(--ease); }
+    .design-picker button[aria-pressed="true"] { color:var(--bg); background:var(--cyan); }
+    .design-picker button:hover { color:var(--t1); background:var(--card-h); }
+
+    body.design-editorial {
+      --bg:#f3f6f5; --bg2:#e6ece9; --card:rgba(255,255,255,.88); --card-h:#fff;
+      --border:rgba(23,42,37,.14); --cyan:#145c88; --cyan-d:rgba(20,92,136,.09);
+      --purple:#d15f42; --purple-d:rgba(209,95,66,.09); --pink:#9c4a6d; --pink-d:rgba(156,74,109,.08);
+      --green:#267448; --green-d:rgba(38,116,72,.09); --orange:#a65b22; --orange-d:rgba(166,91,34,.09);
+      --red:#a83232; --t1:#172720; --t2:#43574d; --t3:#65796f;
+      --ff-disp:'Space Grotesk',sans-serif;
+      background-color:var(--bg);
+      background-image:linear-gradient(rgba(23,42,37,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(23,42,37,.035) 1px,transparent 1px);
+      background-size:32px 32px;
+      cursor:auto;
+    }
+    body.design-editorial * { cursor:auto; }
+    body.design-editorial #cur, body.design-editorial #cur2,
+    body.design-editorial #hcvs, body.design-editorial .orb { display:none; }
+    body.design-editorial nav { background:rgba(249,251,250,.9); border-color:var(--border); box-shadow:0 8px 28px rgba(23,42,37,.1); }
+    body.design-editorial nav.scrolled { background:rgba(249,251,250,.97); border-color:rgba(20,92,136,.24); }
+    body.design-editorial .nav-links a { color:var(--t2); }
+    body.design-editorial .nav-links a:hover, body.design-editorial .nav-links a.active { color:var(--cyan); }
+    body.design-editorial .nav-tog span { background:var(--cyan); }
+    body.design-editorial .hero-inner { max-width:1280px; }
+    body.design-editorial .hero-name { font-weight:700; }
+    body.design-editorial .glitch::before, body.design-editorial .glitch::after { display:none; }
+    body.design-editorial .glitch { color:var(--t1); }
+    body.design-editorial .hero-badge { background:var(--green-d); }
+    body.design-editorial .btn-p { background:var(--cyan); }
+    body.design-editorial .btn-p::before { background:var(--purple); }
+    body.design-editorial .btn-s { border-color:var(--cyan); }
+    body.design-editorial .term { background:#e8efeb; border-color:var(--border); }
+    body.design-editorial .term-line span[style*="--t1"] { color:var(--t1)!important; }
+    body.design-editorial .tl-card, body.design-editorial .stat-c,
+    body.design-editorial .sk-c, body.design-editorial .pat-c,
+    body.design-editorial .pub-c, body.design-editorial .ach-c,
+    body.design-editorial .cert-c, body.design-editorial .con-c {
+      background:var(--card); border-color:var(--border); box-shadow:0 8px 24px rgba(23,42,37,.045);
+      border-radius:10px;
+    }
+    body.design-editorial .tl-card:hover, body.design-editorial .stat-c:hover,
+    body.design-editorial .pat-c:hover, body.design-editorial .pub-c:hover,
+    body.design-editorial .ach-c:hover, body.design-editorial .con-c:hover { box-shadow:0 14px 30px rgba(23,42,37,.1); }
+    body.design-editorial .holo::before, body.design-editorial .tl-card::after { display:none; }
+    body.design-editorial .tag { background:rgba(20,92,136,.04); }
+    body.design-editorial .alt-bg { background:rgba(20,92,136,.035); }
+    body.design-editorial .gdiv { opacity:.32; }
+    body.design-editorial .design-picker { background:rgba(249,251,250,.94); }
+    body.design-editorial .design-picker button:hover { color:var(--t1); }
+
+    body.design-signal {
+      --bg:#101713; --bg2:#17221b; --card:rgba(25,37,29,.88); --card-h:rgba(32,48,37,.96);
+      --border:rgba(196,223,162,.15); --cyan:#c5ef68; --cyan-d:rgba(197,239,104,.1);
+      --purple:#ff795d; --purple-d:rgba(255,121,93,.1); --pink:#67d4bd; --pink-d:rgba(103,212,189,.1);
+      --green:#c5ef68; --green-d:rgba(197,239,104,.1); --orange:#ffc86a; --orange-d:rgba(255,200,106,.1);
+      --red:#ff716b; --t1:#f0f5e9; --t2:#b2c1ae; --t3:#7b907f;
+      --ff-disp:'Space Grotesk',sans-serif;
+      background-color:var(--bg);
+      background-image:linear-gradient(135deg,rgba(197,239,104,.035) 0 1px,transparent 1px 100%);
+      background-size:28px 28px;
+    }
+    body.design-signal nav { background:rgba(16,23,19,.9); border-color:rgba(197,239,104,.22); border-radius:8px; }
+    body.design-signal nav.scrolled { background:rgba(16,23,19,.97); }
+    body.design-signal .nav-logo { -webkit-text-fill-color:var(--cyan); background:none; }
+    body.design-signal .hero-badge { border-radius:6px; }
+    body.design-signal .hero-name { font-weight:700; }
+    body.design-signal .glitch::before { color:var(--cyan); }
+    body.design-signal .glitch::after { color:var(--purple); }
+    body.design-signal .tl-card, body.design-signal .stat-c,
+    body.design-signal .sk-c, body.design-signal .pat-c,
+    body.design-signal .pub-c, body.design-signal .ach-c,
+    body.design-signal .cert-c, body.design-signal .con-c { border-radius:8px; }
+    body.design-signal .tl-card, body.design-signal .stat-c,
+    body.design-signal .sk-c, body.design-signal .pat-c,
+    body.design-signal .pub-c, body.design-signal .cert-c { background:var(--card); }
+    body.design-signal .holo::before { opacity:.55; }
+    body.design-signal .alt-bg { background:linear-gradient(90deg,transparent,rgba(197,239,104,.025),transparent); }
+    body.design-signal .design-picker { background:rgba(16,23,19,.92); border-radius:8px; }
+
+    @media(max-width:768px) {
+      .design-picker { top:58px; right:10px; gap:1px; padding:4px; }
+      .design-label { padding:0 5px; font-size:.56rem; }
+      .design-picker button { padding:8px 7px; font-size:.62rem; }
+      body.design-editorial .nav-links { background:rgba(249,251,250,.98); }
+    }
   </style>
 </head>
 <body>
+
+<div class="design-picker" role="group" aria-label="Choose portfolio design">
+  <span class="design-label">Design</span>
+  <button type="button" data-design="neon" aria-pressed="true">Neon</button>
+  <button type="button" data-design="editorial" aria-pressed="false">Editorial</button>
+  <button type="button" data-design="signal" aria-pressed="false">Signal</button>
+</div>
 
 <!-- Cursor -->
 <div id="cur"></div>
@@ -323,7 +421,7 @@
   <canvas id="hcvs"></canvas>
   <div class="hero-inner">
     <div class="hero-badge">Open to Opportunities</div>
-    <div class="hero-eyebrow">QA Engineer · Automation &amp; Security Testing · Cybersecurity</div>
+    <div class="hero-eyebrow">Software Engineer · Java &amp; Python · Security Advocate</div>
     <h1 class="hero-name">
       <span class="glitch" data-text="VINODKUMAR G">VINODKUMAR G</span>
     </h1>
@@ -333,8 +431,7 @@
       <span class="typing-c"></span>
     </div>
     <p class="hero-desc">
-      <strong>QA Engineer &amp; Software Testing Professional</strong> at <strong>OpenText</strong> with <strong>4+ years</strong> delivering quality — manual, <strong>automation</strong>, performance &amp; security testing across SIEM platforms, adversary intelligence, and AWS cloud infrastructure.
-      Patent inventor, published researcher, and proud security advocate.
+      <strong>Software Engineer and Security Advocate</strong> at <strong>OpenText</strong> with <strong>4+ years</strong> building secure backend services and REST APIs with Java, Python, Spring Boot, and AWS. A hands-on technical leader and collaborative team player who turns complex engineering challenges into reliable software.
     </p>
     <div class="hero-btns">
       <a href="#exp" class="btn-p"><span><i class="fas fa-briefcase"></i> My Work</span></a>
@@ -348,9 +445,9 @@
     </div>
     <div class="hero-stats">
       <div class="hst"><div class="hst-n">4+</div><div class="hst-l">Years Exp</div></div>
-      <div class="hst"><div class="hst-n">3</div><div class="hst-l">Patents</div></div>
+      <div class="hst"><div class="hst-n">4</div><div class="hst-l">Patents</div></div>
       <div class="hst"><div class="hst-n">2</div><div class="hst-l">Publications</div></div>
-      <div class="hst"><div class="hst-n">15+</div><div class="hst-l">Releases</div></div>
+      <div class="hst"><div class="hst-n">Java + Python</div><div class="hst-l">Core Languages</div></div>
     </div>
   </div>
   <div class="scroll-ind">
@@ -372,19 +469,19 @@
     <div class="about-g">
       <div>
         <div class="about-t rv d1">
-          <p>I'm a <strong>QA Engineer &amp; Software Testing Professional</strong> specializing in enterprise security products at <strong>OpenText</strong>. My work spans manual testing, <strong>automation testing</strong>, performance testing, and security testing across adversary intelligence platforms and SIEM systems.</p>
-          <p>I build and maintain <strong>automation frameworks</strong> using Python, Karate, pytest, and Apache JMeter — covering functional, regression, API, and performance testing at scale. I also drive secure-by-default practices through threat modeling, pen-test validation, and CI/CD security integration.</p>
-          <p>As the <strong>Security Advocate</strong> for my product, I own vulnerability management from scan to closure, and act as the first-line investigator for production incidents. I've also filed <strong>3 patents</strong> and co-authored <strong>2 peer-reviewed publications</strong>.</p>
+          <p>I'm a <strong>Software Engineer and Security Advocate</strong> at <strong>OpenText</strong>, developing secure backend services, REST APIs, and product features with Java, Python, Spring Boot, Spring Security, and Hibernate/JPA.</p>
+          <p>I bring a strong ownership mindset to the full engineering lifecycle: technical design, implementation, code review, secure coding, CI/CD, production support, and cloud infrastructure on AWS. My experience building automation and validation tooling helps me deliver dependable software and efficient engineering workflows.</p>
+          <p>As a <strong>Security Advocate and Security Champion</strong>, I help teams make security part of everyday development. I value clear technical thinking, accountability, and collaboration, and have contributed to <strong>4 patents</strong> and <strong>2 research publications</strong>.</p>
         </div>
         <div class="term rv d2">
           <div style="height:26px"></div>
           <div class="term-line"><span class="tp">$ </span><span style="color:var(--t1)">whoami</span></div>
-          <div class="term-line"><span class="to">vinodkumar-g  →  QA Engineer @ OpenText</span></div>
+          <div class="term-line"><span class="to">vinodkumar-g  →  Software Engineer @ OpenText</span></div>
           <div class="term-line" style="margin-top:8px"><span class="tp">$ </span><span style="color:var(--t1)">cat specializations.txt</span></div>
-          <div class="term-line"><span class="to">→ Automation Testing (Python · Karate · pytest · JMeter)</span></div>
-          <div class="term-line"><span class="to">→ Security Testing &amp; Threat Modeling</span></div>
-          <div class="term-line"><span class="to">→ Cloud Infrastructure (AWS / Terraform)</span></div>
-          <div class="term-line"><span class="to">→ SIEM &amp; Threat Intelligence Platforms</span></div>
+          <div class="term-line"><span class="to">→ Java · Python · Spring Boot · Spring Security</span></div>
+          <div class="term-line"><span class="to">→ Secure REST APIs · Backend Engineering</span></div>
+          <div class="term-line"><span class="to">→ AWS · Terraform · DevSecOps</span></div>
+          <div class="term-line"><span class="to">→ Technical Leadership · Team Collaboration</span></div>
           <div class="term-line" style="margin-top:8px"><span class="tp">$ </span><span style="color:var(--t1)">status --current</span></div>
           <div class="term-line"><span class="tg">✓  Open to new opportunities</span></div>
           <div class="term-line"><span class="tg">✓  Bengaluru, Karnataka, India</span></div>
@@ -396,7 +493,7 @@
           <span class="stat-l">Years Experience</span>
         </div>
         <div class="stat-c holo">
-          <span class="stat-n" data-tgt="3">0</span>
+          <span class="stat-n" data-tgt="4">0</span>
           <span class="stat-l">Patents Filed</span>
         </div>
         <div class="stat-c holo">
@@ -404,12 +501,12 @@
           <span class="stat-l">Publications</span>
         </div>
         <div class="stat-c holo">
-          <span class="stat-n" data-tgt="15" data-sfx="+">0</span>
-          <span class="stat-l">Releases Owned</span>
+          <span class="stat-n" style="font-size:1.15rem;-webkit-text-fill-color:var(--cyan)">Java + Python</span>
+          <span class="stat-l">Core Languages</span>
         </div>
         <div class="stat-c holo" style="grid-column:span 2">
-          <span class="stat-n" data-tgt="0" style="font-size:1.1rem;-webkit-text-fill-color:var(--cyan)">Zero Critical Defect Slippage</span>
-          <span class="stat-l">Across All Major Releases</span>
+          <span class="stat-n" style="font-size:1.1rem;-webkit-text-fill-color:var(--cyan)">Security Advocate</span>
+          <span class="stat-l">Secure Engineering Champion</span>
         </div>
       </div>
     </div>
@@ -431,24 +528,24 @@
       <div class="tl-item rv d1">
         <div class="tl-card holo">
           <div class="tl-hdr">
-            <div class="job-title">Quality Assurance Engineer</div>
-            <div class="job-per">Sep 2024 – Present</div>
+            <div class="job-title">Software Engineer</div>
+            <div class="job-per">Sep 2023 – Present</div>
           </div>
           <div class="job-co"><i class="fas fa-building" style="margin-right:6px;color:var(--t3);font-size:.8rem"></i>OpenText — Core Adversary Intelligence Platform</div>
           <ul class="job-ul">
-            <li>Lead end-to-end functional, integration, regression &amp; security testing for adversary intelligence platform processing threat feeds, IOCs, TTPs, and campaigns</li>
-            <li><strong style="color:var(--cyan)">API automation with Python &amp; pytest</strong> — built end-to-end test suites for threat feed endpoints, data quality monitoring, feed sync, VirusTotal false positive deletion, and MISP tag automation</li>
-            <li><strong style="color:var(--cyan)">UI automation with Playwright pytest</strong> — automated browser-level functional and regression flows, reducing manual testing overhead across releases</li>
-            <li>Validate cloud infrastructure (Terraform/Terragrunt) for AWS resources — EC2, RDS, IAM, VPC — including drift detection, idempotency &amp; rollback scenarios</li>
-            <li>Security scanning across Trivy, Grype, Prisma Cloud, Fortify (FoD/FHNG), WebInspect; own full vulnerability tracking &amp; remediation lifecycle</li>
-            <li>Led threat modeling for major releases (25.3, 26.1, 26.2); reproduced &amp; validated pen-test findings, including reclassifying one from High → Medium</li>
-            <li>Drove tooling migrations: GitHub → GitLab, Fortify FoD → FHNG, BlackDuck onboarding; integrated security scans into GitLab CI/CD pipelines</li>
-            <li>Solo QA across minor, major &amp; hotfix releases — zero critical defect slippage; VPAT/accessibility testing, CAB runbooks, sprint demos &amp; retrospectives</li>
+            <li>Design and develop secure REST APIs, backend services, and end-to-end product features using <strong style="color:var(--cyan)">Java, Spring Boot, Spring Security, Hibernate/JPA, and Tomcat</strong>; contribute to pull-request reviews and secure coding practices</li>
+            <li>Build Python automation for engineering and operational workflows, including data-quality checks, feed synchronization, AWS resource lifecycle tasks, and MISP tag management</li>
+            <li>Apply platform security expertise to vulnerability remediation, Fortify SAST/DAST and BlackDuck SCA findings, open-source license reviews, and penetration-test follow-up</li>
+            <li>Serve as <strong style="color:var(--cyan)">Security Advocate</strong>, driving secure development and DevSecOps practices; perform root-cause analysis and coordinate remediation across teams</li>
+            <li>Manage AWS infrastructure using Terraform and Terragrunt, including EC2, RDS, IAM, and VPC provisioning, configuration drift checks, and resource automation</li>
+            <li>Integrate automated security scans into GitLab CI/CD; support GitHub-to-GitLab, Fortify FoD-to-FHNG, and BlackDuck onboarding transitions</li>
+            <li>Lead technical discussions and standups when needed; collaborate across engineering, SRE, and support, and investigate production issues through resolution</li>
           </ul>
           <div class="tags">
-            <span class="tag">Python / pytest</span><span class="tag">Playwright</span><span class="tag">AWS</span>
-            <span class="tag">Terraform</span><span class="tag">Trivy / Grype</span><span class="tag">Fortify</span>
-            <span class="tag">GitLab CI/CD</span><span class="tag">Threat Modeling</span><span class="tag">Cybersecurity</span>
+            <span class="tag">Java</span><span class="tag">Python</span><span class="tag">Spring Boot</span>
+            <span class="tag">Spring Security</span><span class="tag">Hibernate / JPA</span><span class="tag">REST APIs</span>
+            <span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">DevSecOps</span>
+            <span class="tag">Technical Leadership</span><span class="tag">Security Advocate</span>
           </div>
         </div>
       </div>
@@ -456,22 +553,20 @@
       <div class="tl-item rv d2">
         <div class="tl-card holo">
           <div class="tl-hdr">
-            <div class="job-title">Associate QA Engineer</div>
-            <div class="job-per">Aug 2022 – Aug 2024</div>
+            <div class="job-title">Associate Quality Assurance Engineer</div>
+            <div class="job-per">Aug 2022 – Aug 2023</div>
           </div>
           <div class="job-co"><i class="fas fa-building" style="margin-right:6px;color:var(--t3);font-size:.8rem"></i>OpenText — Sentinel SIEM Platform</div>
           <ul class="job-ul">
-            <li>Functional, integration &amp; automation testing for OpenText Sentinel SIEM — real-time event correlation, threat detection, security analytics</li>
-            <li><strong style="color:var(--cyan)">Enhanced Karate automation framework</strong> — increased test coverage by ~35% and cut manual regression effort by ~40%; integrated tests into Jenkins CI/CD pipelines</li>
-            <li>Automated API regression suites, connector integration tests, and SDK compatibility tests using Java &amp; Karate, enabling faster release cycles</li>
-            <li>Identified 4+ critical TLS bugs in FIPS mode during TLS 1.3 enablement and RHEL 8.7/9.0 platform validation</li>
-            <li>Led library upgrade testing — Spring Framework, Spring Security, Snake YAML, JDBC drivers, multiple JDK versions</li>
-            <li>Validated Sentinel Agent Manager (SAM) 8.6 including rebranding across plugins, collectors, connectors, solution packs and reports</li>
+            <li>Contributed Java code and automation-framework enhancements for OpenText Sentinel, supporting integrations, event correlation, and security analytics</li>
+            <li>Improved reusable Java automation components and Jenkins workflows, expanding automated coverage and streamlining continuous verification</li>
+            <li>Partnered with developers on SDK compatibility, TLS 1.3, RHEL platform support, and library/JDK upgrades; used debugging and root-cause analysis to resolve complex issues</li>
+            <li>Collaborated across engineering to clarify requirements, review feature behavior, and strengthen implementation and release readiness</li>
           </ul>
           <div class="tags">
-            <span class="tag">Python / pytest</span><span class="tag">Karate</span><span class="tag">Jenkins</span>
-            <span class="tag">SIEM</span><span class="tag">Cybersecurity</span><span class="tag">TLS 1.3</span>
-            <span class="tag">Java</span><span class="tag">FIPS</span>
+            <span class="tag">Java</span><span class="tag">Test Automation</span><span class="tag">Jenkins</span>
+            <span class="tag">Integrations</span><span class="tag">SIEM</span><span class="tag">TLS 1.3</span>
+            <span class="tag">Release Engineering</span><span class="tag">FIPS</span>
           </div>
         </div>
       </div>
@@ -484,13 +579,13 @@
           </div>
           <div class="job-co"><i class="fas fa-building" style="margin-right:6px;color:var(--t3);font-size:.8rem"></i>OpenText — Directory and Resource Administration (DRA)</div>
           <ul class="job-ul">
-            <li><strong style="color:var(--cyan)">Enhanced automation frameworks</strong> for Active Directory, Azure AD &amp; resource governance workflows, adding new test scenarios and fixing existing automation gaps</li>
-            <li>Validated RBAC, user/group administration &amp; resource provisioning across 100+ test scenarios</li>
-            <li>Developed <strong style="color:var(--cyan)">Python post-deployment validation scripts</strong>, reducing environment verification time by ~30%</li>
+            <li>Enhanced Java automation framework components for Active Directory, Azure AD, and resource-governance workflows</li>
+            <li>Wrote Python scripts to verify user/group administration, RBAC, resource provisioning, and post-deployment configuration</li>
+            <li>Collaborated with engineers to diagnose deployment issues and improve installation and upgrade reliability</li>
           </ul>
           <div class="tags">
-            <span class="tag">Python Scripting</span><span class="tag">Active Directory</span><span class="tag">Azure AD</span>
-            <span class="tag">RBAC</span><span class="tag">Test Automation</span>
+            <span class="tag">Java</span><span class="tag">Python</span><span class="tag">Active Directory</span><span class="tag">Azure AD</span>
+            <span class="tag">RBAC</span><span class="tag">Automation Frameworks</span>
           </div>
         </div>
       </div>
@@ -528,105 +623,68 @@
       <div class="sec-line"></div>
     </div>
     <div class="sk-g">
-
       <div class="sk-c rv d1">
-        <div class="sk-ch">
-          <div class="sk-ico" style="background:var(--cyan-d);border:1px solid rgba(0,245,255,.2);color:var(--cyan)"><i class="fas fa-vial"></i></div>
-          <span class="sk-ct">Testing &amp; QA</span>
-        </div>
+        <div class="sk-ch"><div class="sk-ico" style="background:var(--cyan-d);border:1px solid rgba(0,245,255,.2);color:var(--cyan)"><i class="fas fa-code"></i></div><span class="sk-ct">Software Development</span></div>
         <div class="sk-tags">
-          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Functional Testing</span>
-          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Integration Testing</span>
-          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Regression Testing</span>
-          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Security Testing</span>
-          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Pen-Test Validation</span>
-          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">VPAT / Accessibility</span>
-          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Compliance Testing</span>
-          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Infrastructure Testing</span>
+          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Java</span>
+          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Python</span>
+          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Spring Framework</span>
+          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Spring Boot</span>
+          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Spring Security</span>
+          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Hibernate / JPA</span>
+          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">REST APIs</span>
+          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">Tomcat</span>
+          <span class="stag" style="color:var(--cyan);background:var(--cyan-d);border:1px solid rgba(0,245,255,.2)">SQL</span>
         </div>
       </div>
-
       <div class="sk-c rv d2">
-        <div class="sk-ch">
-          <div class="sk-ico" style="background:var(--purple-d);border:1px solid rgba(168,85,247,.2);color:var(--purple)"><i class="fas fa-shield-virus"></i></div>
-          <span class="sk-ct">Security Tools</span>
-        </div>
+        <div class="sk-ch"><div class="sk-ico" style="background:var(--orange-d);border:1px solid rgba(245,158,11,.2);color:var(--orange)"><i class="fab fa-aws"></i></div><span class="sk-ct">Cloud &amp; Infrastructure</span></div>
         <div class="sk-tags">
-          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">Trivy</span>
-          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">Grype</span>
-          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">Prisma Cloud</span>
-          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">Fortify FoD/FHNG</span>
-          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">WebInspect</span>
-          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">BlackDuck</span>
-          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">MISP</span>
-          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">OWASP Top 10</span>
-          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">STRIDE</span>
-        </div>
-      </div>
-
-      <div class="sk-c rv d1">
-        <div class="sk-ch">
-          <div class="sk-ico" style="background:var(--orange-d);border:1px solid rgba(245,158,11,.2);color:var(--orange)"><i class="fab fa-aws"></i></div>
-          <span class="sk-ct">Cloud &amp; Infrastructure</span>
-        </div>
-        <div class="sk-tags">
-          <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">AWS (EC2, RDS, IAM, VPC)</span>
-          <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">Lambda</span>
-          <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">S3</span>
+          <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">AWS</span>
+          <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">EC2 · RDS · IAM · VPC</span>
+          <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">Lambda · S3 · DynamoDB</span>
+          <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">API Gateway</span>
           <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">Terraform</span>
           <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">Terragrunt</span>
-          <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">Docker</span>
-          <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">Kubernetes</span>
-          <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">CI/CD Pipelines</span>
+          <span class="stag" style="color:var(--orange);background:var(--orange-d);border:1px solid rgba(245,158,11,.2)">Docker · Kubernetes</span>
         </div>
       </div>
-
-      <div class="sk-c rv d2">
-        <div class="sk-ch">
-          <div class="sk-ico" style="background:var(--green-d);border:1px solid rgba(16,185,129,.2);color:var(--green)"><i class="fas fa-code"></i></div>
-          <span class="sk-ct">Programming &amp; Automation</span>
-        </div>
+      <div class="sk-c rv d1">
+        <div class="sk-ch"><div class="sk-ico" style="background:var(--green-d);border:1px solid rgba(16,185,129,.2);color:var(--green)"><i class="fas fa-infinity"></i></div><span class="sk-ct">Automation &amp; CI/CD</span></div>
         <div class="sk-tags">
-          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">Python</span>
-          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">Java</span>
+          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">GitLab CI/CD</span>
+          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">GitHub Actions</span>
+          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">Jenkins</span>
+          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">Python Automation</span>
           <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">pytest</span>
-          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">Karate Framework</span>
-          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">Apache JMeter</span>
-          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">Gatling</span>
-          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">Bash / Shell</span>
-          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">SQL</span>
-          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">API Testing</span>
+          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">Karate</span>
+          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">Shell Scripting</span>
+          <span class="stag" style="color:var(--green);background:var(--green-d);border:1px solid rgba(16,185,129,.2)">Git</span>
         </div>
       </div>
-
+      <div class="sk-c rv d2">
+        <div class="sk-ch"><div class="sk-ico" style="background:var(--purple-d);border:1px solid rgba(168,85,247,.2);color:var(--purple)"><i class="fas fa-shield-alt"></i></div><span class="sk-ct">Security Engineering</span></div>
+        <div class="sk-tags">
+          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">Security Advocate</span>
+          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">Secure SDLC</span>
+          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">DevSecOps</span>
+          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">Fortify SAST / DAST</span>
+          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">BlackDuck SCA</span>
+          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">OWASP Top 10</span>
+          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">Threat Modeling</span>
+          <span class="stag" style="color:var(--purple);background:var(--purple-d);border:1px solid rgba(168,85,247,.2)">Trivy · Grype · Prisma</span>
+        </div>
+      </div>
       <div class="sk-c rv d3">
-        <div class="sk-ch">
-          <div class="sk-ico" style="background:var(--pink-d);border:1px solid rgba(236,72,153,.2);color:var(--pink)"><i class="fas fa-brain"></i></div>
-          <span class="sk-ct">Security Analysis</span>
-        </div>
+        <div class="sk-ch"><div class="sk-ico" style="background:var(--pink-d);border:1px solid rgba(236,72,153,.2);color:var(--pink)"><i class="fas fa-users"></i></div><span class="sk-ct">Leadership &amp; Collaboration</span></div>
         <div class="sk-tags">
-          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">SIEM — Sentinel</span>
-          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Threat Intelligence</span>
-          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">IOC Processing</span>
-          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Threat Modeling</span>
-          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Vulnerability Assessment</span>
-          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Penetration Testing</span>
-          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Offensive Security</span>
-        </div>
-      </div>
-
-      <div class="sk-c rv d4">
-        <div class="sk-ch">
-          <div class="sk-ico" style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);color:var(--orange)"><i class="fas fa-users-cog"></i></div>
-          <span class="sk-ct">Leadership &amp; Process</span>
-        </div>
-        <div class="sk-tags">
-          <span class="stag" style="color:var(--orange);background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2)">Release Ownership</span>
-          <span class="stag" style="color:var(--orange);background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2)">Sprint Demos</span>
-          <span class="stag" style="color:var(--orange);background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2)">Agile / Scrum</span>
-          <span class="stag" style="color:var(--orange);background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2)">PR Reviews</span>
-          <span class="stag" style="color:var(--orange);background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2)">Cross-team Collaboration</span>
-          <span class="stag" style="color:var(--orange);background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2)">Knowledge Transfer</span>
+          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Technical Leadership</span>
+          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Team Player</span>
+          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Technical Thinking</span>
+          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Code / PR Reviews</span>
+          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Agile / Scrum</span>
+          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Root Cause Analysis</span>
+          <span class="stag" style="color:var(--pink);background:var(--pink-d);border:1px solid rgba(236,72,153,.2)">Production Support</span>
         </div>
       </div>
 
@@ -649,6 +707,11 @@
       <i class="fas fa-certificate" style="color:var(--orange)"></i> Patents Filed
     </div>
     <div class="cards-g" style="margin-bottom:44px">
+      <div class="pat-c rv d1">
+        <div class="pat-ico"><i class="fas fa-plug" style="color:var(--purple)"></i></div>
+        <div class="pat-id">ID: 92089908</div>
+        <div class="pat-title">Auto-Connector Generator System Using Large Language Models (LLMs) for Heterogeneous Log Sources</div>
+      </div>
       <div class="pat-c rv d1">
         <div class="pat-ico"><i class="fas fa-network-wired" style="color:var(--purple)"></i></div>
         <div class="pat-id">ID: 92084489</div>
@@ -737,7 +800,7 @@
         <div class="ach-ico" style="background:rgba(236,72,153,.1)">⭐</div>
         <div>
           <div class="ach-title">HackerRank 5-Star Programmer</div>
-          <div class="ach-desc">5★ rating in both Python and Java — applied directly to security automation in production QA pipelines.</div>
+          <div class="ach-desc">5★ rating in both Python and Java, applied to backend development and security automation in production engineering workflows.</div>
         </div>
       </div>
 
@@ -769,7 +832,7 @@
         <div class="ach-ico" style="background:rgba(0,245,255,.1)">🎤</div>
         <div>
           <div class="ach-title">Tech Talks &amp; Demos</div>
-          <div class="ach-desc">Delivered sessions on Docker for Beginners, TLS, and VPAT for the SecOps QE SkillUp program.</div>
+          <div class="ach-desc">Shared practical engineering knowledge through sessions on Docker, networking, TLS, and accessibility readiness.</div>
         </div>
       </div>
 
@@ -789,52 +852,28 @@
     </div>
     <div class="cert-g">
       <div class="cert-c rv d1">
+        <div class="cert-ico" style="background:var(--cyan-d);border:1px solid rgba(0,245,255,.2);color:var(--cyan)"><i class="fab fa-java"></i></div>
+        <div class="cert-nm">Java, Spring Framework &amp; Spring Boot<span>Professional Training</span></div>
+      </div>
+      <div class="cert-c rv d2">
+        <div class="cert-ico" style="background:var(--purple-d);border:1px solid rgba(168,85,247,.2);color:var(--purple)"><i class="fas fa-brain"></i></div>
+        <div class="cert-nm">Spring AI &amp; Generative AI<span>Professional Training</span></div>
+      </div>
+      <div class="cert-c rv d3">
+        <div class="cert-ico" style="background:var(--orange-d);border:1px solid rgba(245,158,11,.2);color:var(--orange)"><i class="fas fa-lock"></i></div>
+        <div class="cert-nm">Secure Coding Practices — Parts 1–4 &amp; Refresher<span>OpenText</span></div>
+      </div>
+      <div class="cert-c rv d4">
+        <div class="cert-ico" style="background:var(--green-d);border:1px solid rgba(16,185,129,.2);color:var(--green)"><i class="fas fa-bug"></i></div>
+        <div class="cert-nm">Penetration Testing: Advanced Web Testing<span>LinkedIn Learning</span></div>
+      </div>
+      <div class="cert-c rv d1">
         <div class="cert-ico" style="background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);color:var(--red)"><i class="fas fa-user-secret"></i></div>
         <div class="cert-nm">Ethical Hacker<span>Cisco Networking Academy</span></div>
       </div>
       <div class="cert-c rv d2">
-        <div class="cert-ico" style="background:var(--cyan-d);border:1px solid rgba(0,245,255,.2);color:var(--cyan)"><i class="fas fa-shield-virus"></i></div>
-        <div class="cert-nm">Cyber Threat Management<span>Cisco Networking Academy</span></div>
-      </div>
-      <div class="cert-c rv d3">
-        <div class="cert-ico" style="background:var(--orange-d);border:1px solid rgba(245,158,11,.2);color:var(--orange)"><i class="fab fa-jenkins"></i></div>
-        <div class="cert-nm">Jenkins Essential Training<span>LinkedIn Learning</span></div>
-      </div>
-      <div class="cert-c rv d4">
-        <div class="cert-ico" style="background:var(--purple-d);border:1px solid rgba(168,85,247,.2);color:var(--purple)"><i class="fas fa-cloud"></i></div>
-        <div class="cert-nm">Cloud Fundamentals<span>LinkedIn Learning</span></div>
-      </div>
-      <div class="cert-c rv d1">
-        <div class="cert-ico" style="background:var(--green-d);border:1px solid rgba(16,185,129,.2);color:var(--green)"><i class="fas fa-bug"></i></div>
-        <div class="cert-nm">Penetration Testing: Advanced<span>LinkedIn Learning</span></div>
-      </div>
-      <div class="cert-c rv d2">
-        <div class="cert-ico" style="background:var(--cyan-d);border:1px solid rgba(0,245,255,.2);color:var(--cyan)"><i class="fab fa-aws"></i></div>
-        <div class="cert-nm">AWS for Non-Engineers<span>LinkedIn Learning</span></div>
-      </div>
-      <div class="cert-c rv d3">
-        <div class="cert-ico" style="background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);color:var(--red)"><i class="fas fa-search"></i></div>
-        <div class="cert-nm">Digital Forensics Essentials (DFE)<span>EC-Council CodeRed</span></div>
-      </div>
-      <div class="cert-c rv d4">
-        <div class="cert-ico" style="background:var(--purple-d);border:1px solid rgba(168,85,247,.2);color:var(--purple)"><i class="fas fa-bomb"></i></div>
-        <div class="cert-nm">Ethical Hacking Essentials (EHE)<span>EC-Council CodeRed</span></div>
-      </div>
-      <div class="cert-c rv d1">
-        <div class="cert-ico" style="background:var(--green-d);border:1px solid rgba(16,185,129,.2);color:var(--green)"><i class="fas fa-network-wired"></i></div>
-        <div class="cert-nm">Network Defense Essentials (NDE)<span>EC-Council CodeRed</span></div>
-      </div>
-      <div class="cert-c rv d2">
-        <div class="cert-ico" style="background:var(--orange-d);border:1px solid rgba(245,158,11,.2);color:var(--orange)"><i class="fas fa-lock"></i></div>
-        <div class="cert-nm">Secure Coding Practices (Parts 1–4)<span>OpenText</span></div>
-      </div>
-      <div class="cert-c rv d3">
-        <div class="cert-ico" style="background:var(--cyan-d);border:1px solid rgba(0,245,255,.2);color:var(--cyan)"><i class="fas fa-eye"></i></div>
+        <div class="cert-ico" style="background:var(--cyan-d);border:1px solid rgba(0,245,255,.2);color:var(--cyan)"><i class="fas fa-shield-alt"></i></div>
         <div class="cert-nm">OWASP Top 10<span>OpenText</span></div>
-      </div>
-      <div class="cert-c rv d4">
-        <div class="cert-ico" style="background:var(--purple-d);border:1px solid rgba(168,85,247,.2);color:var(--purple)"><i class="fas fa-wifi"></i></div>
-        <div class="cert-nm">Wireshark for Network Security<span>Coursera</span></div>
       </div>
     </div>
   </div>
@@ -877,7 +916,7 @@
       <div class="sec-line"></div>
     </div>
     <p class="rv d1" style="font-size:.97rem;color:var(--t2);max-width:520px;line-height:1.8;margin-bottom:36px">
-      Open to opportunities in security testing, threat intelligence, or QA engineering roles.
+      Open to software engineering opportunities focused on Java, Python, Spring, cloud development, and secure software.
       Whether it's a new challenge, a collaboration, or just to say hello — let's talk.
     </p>
     <div class="con-g">
@@ -902,7 +941,7 @@
 </section>
 
 <footer>
-  <p>Crafted with <span>❤</span> by <span>Vinodkumar G</span> &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; <span>QA Engineer · Automation &amp; Security Testing Professional</span></p>
+  <p>Crafted with <span>❤</span> by <span>Vinodkumar G</span> &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; <span>Software Engineer · Security Advocate</span></p>
 </footer>
 
 <!-- ═══════════════════════════════════════════════════════
@@ -910,6 +949,32 @@
 ═══════════════════════════════════════════════════════ -->
 <script>
 'use strict';
+
+/* ── DESIGN SWITCHER ────────────────────────────────── */
+const designButtons = document.querySelectorAll('[data-design]');
+function colorToRgb(value) {
+  const hex = value.trim().match(/^#([\da-f]{6})$/i);
+  return hex ? [parseInt(hex[1].slice(0, 2), 16), parseInt(hex[1].slice(2, 4), 16), parseInt(hex[1].slice(4, 6), 16)] : [0, 245, 255];
+}
+let particleColors = [];
+function setDesign(name, persist = true) {
+  document.body.classList.remove('design-editorial', 'design-signal');
+  if (name === 'editorial') document.body.classList.add('design-editorial');
+  if (name === 'signal') document.body.classList.add('design-signal');
+  designButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.design === name)));
+  const styles = getComputedStyle(document.body);
+  particleColors = [colorToRgb(styles.getPropertyValue('--cyan')), colorToRgb(styles.getPropertyValue('--purple'))];
+  if (persist) {
+    try { localStorage.setItem('portfolio-design', name); } catch (_) { /* Local storage may be unavailable for file previews. */ }
+  }
+}
+let initialDesign = 'neon';
+try {
+  const savedDesign = localStorage.getItem('portfolio-design');
+  if (['neon', 'editorial', 'signal'].includes(savedDesign)) initialDesign = savedDesign;
+} catch (_) { /* Keep the default design when local storage is unavailable. */ }
+setDesign(initialDesign, false);
+designButtons.forEach(button => button.addEventListener('click', () => setDesign(button.dataset.design)));
 
 /* ── CURSOR ─────────────────────────────────────────── */
 const cur = document.getElementById('cur');
@@ -972,13 +1037,15 @@ function updateActiveNav() {
 
 /* ── TYPING ANIMATION ───────────────────────────────── */
 const roles = [
-  'QA & Automation Engineer',
-  'Security Advocate @ OpenText',
-  'Automation Framework Builder',
-  'Patent Inventor (×3)',
-  'Performance & Security Tester',
-  'SIEM Testing Expert',
-  'Cybersecurity Researcher'
+  'Software Engineer @ OpenText',
+  'Java Backend Developer',
+  'Python Developer',
+  'Spring Boot Engineer',
+  'AWS Cloud Developer',
+  'Security Advocate',
+  'Security Champion',
+  'Technical Team Leader',
+  'Patent Inventor (×4)'
 ];
 let rIdx = 0, cIdx = 0, del = false;
 const ttEl = document.getElementById('ttext');
@@ -1052,7 +1119,7 @@ class Pt {
     this.vy = (Math.random() - .5) * .45;
     this.r = Math.random() * 1.8 + .4;
     this.op = Math.random() * .45 + .1;
-    this.col = Math.random() > .5 ? [0,245,255] : [168,85,247];
+    this.col = particleColors[Math.random() > .5 ? 0 : 1];
   }
   update() {
     const dx = this.x - mouse.x, dy = this.y - mouse.y;
@@ -1090,7 +1157,7 @@ function drawLines() {
         ctx.beginPath();
         ctx.moveTo(pts[i].x, pts[i].y);
         ctx.lineTo(pts[j].x, pts[j].y);
-        ctx.strokeStyle = `rgba(0,245,255,${(1 - d/MAX) * .12})`;
+        ctx.strokeStyle = `rgba(${particleColors[0].join(',')},${(1 - d/MAX) * .12})`;
         ctx.lineWidth = .6;
         ctx.stroke();
       }
