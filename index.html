@@ -219,6 +219,17 @@
     .pub-ico { width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.25rem; margin-bottom:16px; background:var(--cyan-d); border:1px solid rgba(0,245,255,.2); }
     .pub-meta { font-family:var(--ff-mono); font-size:.68rem; color:var(--cyan); margin-bottom:8px; letter-spacing:.08em; }
     .pub-title { font-size:.88rem; font-weight:600; color:var(--t1); line-height:1.55; }
+    .project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+    .project-card { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:22px; display:flex; flex-direction:column; min-height:100%; transition:transform .25s var(--ease),border-color .25s,background .25s; }
+    .project-card:hover { transform:translateY(-4px); border-color:rgba(0,245,255,.25); background:var(--card-h); }
+    .project-top { display:flex; justify-content:space-between; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:14px; }
+    .project-kind,.project-build { font:500 .62rem var(--ff-mono); letter-spacing:.06em; text-transform:uppercase; color:var(--cyan); }
+    .project-build { color:var(--t3); }
+    .project-card h3 { margin:0 0 8px; color:var(--t1); font:700 1rem var(--ff-disp); }
+    .project-card p { margin:0 0 12px; color:var(--t2); font-size:.82rem; line-height:1.7; }
+    .project-card ul { margin:0 0 15px; padding-left:17px; color:var(--t2); font-size:.76rem; line-height:1.65; }
+    .project-card li::marker { color:var(--cyan); }
+    .project-card .tags { margin-top:auto; }
 
     /* ── ACHIEVEMENTS ── */
     .ach-g { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:16px; }
@@ -406,6 +417,7 @@
   <ul class="nav-links" id="nl">
     <li><a href="#about"   onclick="cnav()">About</a></li>
     <li><a href="#exp"     onclick="cnav()">Experience</a></li>
+    <li><a href="#projects" onclick="cnav()">Projects</a></li>
     <li><a href="#skills"  onclick="cnav()">Skills</a></li>
     <li><a href="#patents" onclick="cnav()">Patents</a></li>
     <li><a href="#awards"  onclick="cnav()">Awards</a></li>
@@ -614,11 +626,59 @@
 
 <div class="gdiv"></div>
 
+<!-- ═══════════════════ PROJECTS ═══════════════════ -->
+<section id="projects" class="alt-bg">
+  <div class="wrap">
+    <div class="sec-hdr rv">
+      <span class="sec-tag">// 03. projects</span>
+      <h2 class="sec-title">Security software, built to explain itself.</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="project-grid">
+      <article class="project-card rv d1">
+        <div class="project-top"><span class="project-kind">SIEM / SOAR · 01</span><span class="project-build">Java 21 · Maven</span></div>
+        <h3>SentinelFlow</h3>
+        <p>A local SIEM/SOAR workspace that turns synthetic security events into reviewable incidents with ordered evidence and controlled response proposals.</p>
+        <ul>
+          <li>Versioned APIs for events, incidents, demo incident creation, and response-action approval.</li>
+          <li>PostgreSQL persistence with Flyway and Redis JSON read caches (30-second TTL).</li>
+          <li>Viewer/analyst/admin roles; every proposed response requires admin approval.</li>
+        </ul>
+        <div class="tags"><span class="tag">Spring Boot 3.5</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Spring Security</span><span class="tag">Docker Compose</span></div>
+      </article>
+      <article class="project-card rv d2">
+        <div class="project-top"><span class="project-kind">UEBA · 02</span><span class="project-build">Java 21 · Maven</span></div>
+        <h3>BehaviorGuard</h3>
+        <p>An explainable UEBA investigation app showing why a user’s risk score changed, with deterministic scoring and evidence-linked factors.</p>
+        <ul>
+          <li>Risk leaderboard, user profiles, baseline context, factor breakdowns, and investigation cases.</li>
+          <li>Demonstration account-takeover scenario scores 92 using five visible risk factors.</li>
+          <li>PostgreSQL/Flyway persistence and Redis JSON caching (30-second TTL).</li>
+        </ul>
+        <div class="tags"><span class="tag">Explainable scoring</span><span class="tag">Spring Boot 3.5</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span></div>
+      </article>
+      <article class="project-card rv d3">
+        <div class="project-top"><span class="project-kind">Threat intelligence · 03</span><span class="project-build">Java 21 · Gradle</span></div>
+        <h3>ThreatLens</h3>
+        <p>An IOC workspace to validate, organize, and investigate indicators without contacting external feeds or submitted observables.</p>
+        <ul>
+          <li>Intake and search for IPv4, domains, HTTP(S) URLs, SHA-256 hashes, and email indicators.</li>
+          <li>Canonicalization, duplicate protection, confidence/source/expiry fields, tags, and ATT&amp;CK metadata.</li>
+          <li>Synthetic sightings linked to seeded indicators and evidence.</li>
+        </ul>
+        <div class="tags"><span class="tag">Spring Boot 3.5</span><span class="tag">PostgreSQL</span><span class="tag">Flyway</span><span class="tag">Redis</span><span class="tag">ATT&amp;CK</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="gdiv"></div>
+
 <!-- ═══════════════════ SKILLS ═══════════════════ -->
 <section id="skills" class="alt-bg">
   <div class="wrap">
     <div class="sec-hdr rv">
-      <span class="sec-tag">// 03. skills</span>
+      <span class="sec-tag">// 04. skills</span>
       <h2 class="sec-title">Technical Arsenal</h2>
       <div class="sec-line"></div>
     </div>
@@ -698,7 +758,7 @@
 <section id="patents">
   <div class="wrap">
     <div class="sec-hdr rv">
-      <span class="sec-tag">// 04. research &amp; innovation</span>
+      <span class="sec-tag">// 05. research &amp; innovation</span>
       <h2 class="sec-title">Patents &amp; Publications</h2>
       <div class="sec-line"></div>
     </div>
@@ -758,7 +818,7 @@
 <section id="awards" class="alt-bg">
   <div class="wrap">
     <div class="sec-hdr rv">
-      <span class="sec-tag">// 05. achievements</span>
+      <span class="sec-tag">// 06. achievements</span>
       <h2 class="sec-title">Awards &amp; Recognition</h2>
       <div class="sec-line"></div>
     </div>
@@ -846,7 +906,7 @@
 <section id="certs">
   <div class="wrap">
     <div class="sec-hdr rv">
-      <span class="sec-tag">// 06. certifications</span>
+      <span class="sec-tag">// 07. certifications</span>
       <h2 class="sec-title">Certifications</h2>
       <div class="sec-line"></div>
     </div>
@@ -885,7 +945,7 @@
 <section id="edu" class="alt-bg">
   <div class="wrap">
     <div class="sec-hdr rv">
-      <span class="sec-tag">// 07. education</span>
+      <span class="sec-tag">// 08. education</span>
       <h2 class="sec-title">Academic Background</h2>
       <div class="sec-line"></div>
     </div>
@@ -911,7 +971,7 @@
 <section id="contact">
   <div class="wrap">
     <div class="sec-hdr rv">
-      <span class="sec-tag">// 08. contact</span>
+      <span class="sec-tag">// 09. contact</span>
       <h2 class="sec-title">Let's Connect</h2>
       <div class="sec-line"></div>
     </div>
@@ -1021,7 +1081,7 @@ function cnav() {
 }
 
 /* ── ACTIVE NAV HIGHLIGHT ───────────────────────────── */
-const secs = ['hero','about','exp','skills','patents','awards','certs','edu','contact'];
+const secs = ['hero','about','exp','projects','skills','patents','awards','certs','edu','contact'];
 const nlinks = document.querySelectorAll('.nav-links a');
 function updateActiveNav() {
   let cur_sec = '';
